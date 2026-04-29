@@ -31,7 +31,7 @@ export const Home = () => {
             </a>
           </div>
         </div>
-        
+
         <div className="absolute bottom-10 left-6 animate-bounce">
           <a href="#about" className="text-slate-400 hover:text-slate-900 transition-colors">
             <ArrowDown className="w-6 h-6" />

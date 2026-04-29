@@ -2,7 +2,8 @@
 
 /* Custom utility variables */
 @theme {
-  --color-highlight: #3b82f6; /* Example subtle highlight */
+  --color-highlight: #3b82f6;
+  /* Example subtle highlight */
 }
 
 body {

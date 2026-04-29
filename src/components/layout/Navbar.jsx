@@ -26,7 +26,7 @@ export const Navbar = () => {
 
   const handleScrollToSection = (e, href) => {
     if (!isHomePage) return; // Let default anchor behavior handle it if we ever change routing, but here we just link back home if not home.
-    
+
     e.preventDefault();
     const element = document.querySelector(href);
     if (element) {
@@ -40,9 +40,8 @@ export const Navbar = () => {
   };
 
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      isScrolled ? 'bg-white/80 backdrop-blur-md border-b border-slate-200 shadow-sm py-4' : 'bg-transparent py-6'
-    }`}>
+    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-white/80 backdrop-blur-md border-b border-slate-200 shadow-sm py-4' : 'bg-transparent py-6'
+      }`}>
       <div className="max-w-6xl mx-auto px-6 flex items-center justify-between">
         <Link to="/" className="flex items-center gap-2 group">
           <div className="w-10 h-10 bg-slate-900 text-white rounded-xl flex items-center justify-center group-hover:bg-[var(--color-highlight)] transition-colors">
@@ -55,8 +54,8 @@ export const Navbar = () => {
         <div className="hidden md:flex items-center gap-8">
           {isHomePage ? (
             navLinks.map((link) => (
-              <a 
-                key={link.name} 
+              <a
+                key={link.name}
                 href={link.href}
                 onClick={(e) => handleScrollToSection(e, link.href)}
                 className="text-sm font-medium text-slate-600 hover:text-slate-900 transition-colors"
@@ -69,11 +68,11 @@ export const Navbar = () => {
               Back to Home
             </Link>
           )}
-          
+
         </div>
 
         {/* Mobile Menu Toggle */}
-        <button 
+        <button
           className="md:hidden text-slate-900 p-2"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
         >
@@ -86,8 +85,8 @@ export const Navbar = () => {
         <div className="md:hidden absolute top-full left-0 right-0 bg-white border-b border-slate-200 shadow-lg px-6 py-4 flex flex-col gap-4">
           {isHomePage ? (
             navLinks.map((link) => (
-              <a 
-                key={link.name} 
+              <a
+                key={link.name}
                 href={link.href}
                 onClick={(e) => handleScrollToSection(e, link.href)}
                 className="text-base font-medium text-slate-600 py-2 border-b border-slate-100"
@@ -96,7 +95,7 @@ export const Navbar = () => {
               </a>
             ))
           ) : (
-             <Link to="/" className="text-base font-medium text-slate-600 py-2 border-b border-slate-100" onClick={() => setMobileMenuOpen(false)}>
+            <Link to="/" className="text-base font-medium text-slate-600 py-2 border-b border-slate-100" onClick={() => setMobileMenuOpen(false)}>
               Back to Home
             </Link>
           )}
